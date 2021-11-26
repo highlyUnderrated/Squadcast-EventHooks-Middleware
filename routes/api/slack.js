@@ -18,7 +18,6 @@ router.post('/slack', async (request, response) => {
     var resp = "";
     while(true){
         currenturl = request.header(count.toString());
-        console.log(currenturl);
         if (currenturl !== undefined) {
             var slackData = { "text" : "Incident Name : " + request.body.message + ", " + "Incident State : " + request.body.status + ", " + "Description : " + request.body.description + ", " + "Link : " + "https://app.squadcast.com/incident/"+request.body.id}
             await axios({

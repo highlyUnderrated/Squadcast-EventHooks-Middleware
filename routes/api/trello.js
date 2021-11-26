@@ -14,6 +14,10 @@ router.post('/trello', async (request, response) => {
         logger.error("Bad Request, Message, Description or id not found");
         return response.status(400).json(errorResponse("Bad Request, Message, Description or id not found"));
     }
+    if ((!request.header("idList")) && (!request.header("key")) && (!request.header("token"))) {
+        logger.error("Bad Request, idList, key or token Not Found");
+        return response.status(400).json(errorResponse("Bad Request, idList, key or token Not Found"));
+    }
     await axios({
       method: 'post',
       url: process.env.trellourl,
