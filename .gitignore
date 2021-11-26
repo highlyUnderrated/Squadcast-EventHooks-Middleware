@@ -1,0 +1,4 @@
+node_modules
+package-lock.json
+/logs/squadcast-middleware.log
+.DS_Store
