@@ -54,5 +54,49 @@ Request Headers :-
 > URL : https://<Server-IP-Address>:5000/squadcast/middleware/email
 
 Request Headers :- 
-* To use the email webhook, just paste the URL mentioned above in Squadcast Webhook URl box. In the headers, just add "from_email", "from_password" & "to_email" and their proper values. Eg. : 
+* To use the email webhook, just paste the URL mentioned above in Squadcast Webhook URl box. In the headers, just add "from_email", "from_password", "to_email" & "SMTP" and their proper values. Eg. : 
 ![image](assets/email.png)
+
+List of SMTP Providers Supported : -
+* Service names are case insensitive : 
+"126"
+"163"
+"1und1"
+"AOL"
+"DebugMail"
+"DynectEmail"
+"FastMail"
+"GandiMail"
+"Gmail"
+"Godaddy"
+"GodaddyAsia"
+"GodaddyEurope"
+"hot.ee"
+"Hotmail"
+"iCloud"
+"mail.ee"
+"Mail.ru"
+"Maildev"
+"Mailgun"
+"Mailjet"
+"Mailosaur"
+"Mandrill"
+"Naver"
+"OpenMailBox"
+"Outlook365"
+"Postmark"
+"QQ"
+"QQex"
+"SendCloud"
+"SendGrid"
+"SendinBlue"
+"SendPulse"
+"SES"
+"SES-US-EAST-1"
+"SES-US-WEST-2"
+"SES-EU-WEST-1"
+"Sparkpost"
+"Yahoo"
+"Yandex"
+"Zoho"
+"qiye.aliyun"
