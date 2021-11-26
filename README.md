@@ -34,7 +34,7 @@ nodemon start
 
 Request Headers :- 
 * Slack URL can support multiple channels. To notify channels, just put integers as name of Key value pair & value should be the Slack Webhook. Eg. :
-![image](https://drive.google.com/uc?export=view&id=1H-DsKZ723Xei0hz5A53pJPeIAbXbg68v)
+![image](assets/slack.png)
 
 ### Trello
 
@@ -42,10 +42,10 @@ Request Headers :-
 
 Request Headers :- 
 * To use the Trello webhook, just paste the URL mentioned above in Squadcast Webhook URl box. In the headers, just add "idList", "key" & "token" and their proper values. Eg. : 
-![image](https://drive.google.com/uc?export=view&id=1Ib6khkN1oL59pAzQuqcV80dHjonWtzrO)
+![image](assets/trello.png)
 
 * To see your idList, Open a card > Click on Share > Click on Export Json > You'll see a JSON which will contain idList.
-* ![image](https://drive.google.com/uc?export=view&id=19RH3nw5RPL8iqfbHlboKLVu-lDhOhqvA)
+* ![image](assets/idList-example.png)
 * Tip : To get you own token & key, navigate to : https://trello.com/app-key
 
 
@@ -55,4 +55,4 @@ Request Headers :-
 
 Request Headers :- 
 * To use the email webhook, just paste the URL mentioned above in Squadcast Webhook URl box. In the headers, just add "from_email", "from_password" & "to_email" and their proper values. Eg. : 
-![image](https://drive.google.com/uc?export=view&id=1pqFs6-oklbyCZUxFv5vldj4Ux0_dZz-G)
+![image](assets/email.png)
