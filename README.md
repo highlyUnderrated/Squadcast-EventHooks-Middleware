@@ -30,7 +30,7 @@ nodemon start
 
 ### Slack
 
-> URL : https://<Server-IP-Address>:5000/squadcast/middleware/slack
+> URL : https://Server-IP-Address:5000/squadcast/middleware/slack
 
 Request Headers :- 
 * Slack URL can support multiple channels. To notify channels, just put integers as name of Key value pair & value should be the Slack Webhook. Eg. :
@@ -38,7 +38,7 @@ Request Headers :-
 
 ### Trello
 
-> URL : https://<Server-IP-Address>:5000/squadcast/middleware/trello
+> URL : https://Server-IP-Address:5000/squadcast/middleware/trello
 
 Request Headers :- 
 * To use the Trello webhook, just paste the URL mentioned above in Squadcast Webhook URl box. In the headers, just add "idList", "key" & "token" and their proper values. Eg. : 
@@ -51,7 +51,7 @@ Request Headers :-
 
 ### Email
 
-> URL : https://<Server-IP-Address>:5000/squadcast/middleware/email
+> URL : https://Server-IP-Address:5000/squadcast/middleware/email
 
 Request Headers :- 
 * To use the email webhook, just paste the URL mentioned above in Squadcast Webhook URl box. In the headers, just add "from_email", "from_password", "to_email" & "SMTP" and their proper values. Eg. : 
