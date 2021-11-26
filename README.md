@@ -11,7 +11,7 @@ This repository contains the code for the Squadcast Middleware and is intended t
 ## Getting Started
  - Clone this repo
 ```sh
-git clone https://gitlab.com/dbsc-india/msac-access-layer
+git clone https://github.com/highlyUnderrated/Squadcast-EventHooks-Middleware.git
 ```
 - Install dependencies
 ```sh

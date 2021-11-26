@@ -27,8 +27,6 @@ app.use('/squadcast/middleware', trelloRouter);
 
 // HTTPS SERVER
 const port = process.env.PORT;
-// https.createServer(options, app).listen(port, () => {
-//     console.log("Squadcast - Slack - Event Hooks - HTTPS Server is running on port:" + port);
-// });
-
-app.listen(port, () =>{});
+https.createServer(options, app).listen(port, () => {
+    console.log("Squadcast - Slack - Event Hooks - HTTPS Server is running on port:" + port);
+});
