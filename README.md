@@ -1,4 +1,4 @@
-![image](https://drive.google.com/uc?export=view&id=190XlNLwejgSz5LijH7qJnOK1ORVUfLns)
+![image](assets/SQ.svg)
 # Squadcast Event Hooks Middleware
 
 This repository contains the code for the Squadcast Middleware and is intended to be used along with Event Hooks.
