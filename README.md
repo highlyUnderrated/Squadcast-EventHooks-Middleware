@@ -7,6 +7,10 @@ This repository contains the code for the Squadcast Middleware and is intended t
 - git
 - NodeJs | npm
 - nodemon
+### Tip : For Linux Users, just execute the command below to install all the Prerequisites
+```
+bash dependencies.sh
+```
 
 ## Getting Started
  - Clone this repo
