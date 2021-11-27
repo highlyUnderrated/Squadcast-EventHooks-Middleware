@@ -31,8 +31,6 @@ if( process.env.telegram_bot_start.toLowerCase() == "yes") {
 
 // HTTPS SERVER
 const port = process.env.PORT;
-// https.createServer(options, app).listen(port, () => {
-//     console.log("Squadcast - Middleware - Event Hooks - HTTPS Server is running on port:" + port);
-// });
-
-app.listen(port, () =>{});
+https.createServer(options, app).listen(port, () => {
+    console.log("Squadcast - Middleware - Event Hooks - HTTPS Server is running on port:" + port);
+});
