@@ -7,7 +7,7 @@ const { errorResponse, successResponse } = require("../../util/response/response
 // ROUTER INITIALIZATION
 const router = require("express").Router();
 
-// Slack demo channel API
+// Slack channel API
 router.post('/slack', async (request, response) => {
     //HANDLE BAD REQUEST
     if ((!request.body.message) && (!request.body.description) && (!request.body.id)) {
@@ -23,7 +23,10 @@ router.post('/slack', async (request, response) => {
     while(true){
         currenturl = request.header(count.toString());
         if (currenturl !== undefined) {
-            var slackData = { "text" : "Incident Name : " + request.body.message + ", " + "Incident State : " + request.body.status + ", " + "Description : " + request.body.description + ", " + "Link : " + "https://app.squadcast.com/incident/"+request.body.id}
+            var slackData = { "text" : "Incident Name : " + request.body.message 
+                + "\n\n" + "Incident State : " + request.body.status + "\n\n" 
+                + "Description : " + request.body.description + "\n\n" 
+                + "Incident Link : " + "https://app.squadcast.com/incident/"+request.body.id}
             await axios({
                 method: 'post',
                 url: currenturl,
