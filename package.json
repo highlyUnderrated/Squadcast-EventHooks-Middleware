@@ -23,6 +23,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "node-telegram-bot-api": "^0.54.0",
     "nodemailer": "^6.7.1",
     "nodemon": "^2.0.15",
     "properties-reader": "^2.2.0",

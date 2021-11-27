@@ -24,9 +24,15 @@ const emailRouter = require("./routes/api/email");
 app.use('/squadcast/middleware', emailRouter);
 const trelloRouter = require("./routes/api/trello");
 app.use('/squadcast/middleware', trelloRouter);
+if( process.env.telegram_bot_start.toLowerCase() == "yes") {
+    const telegramRouter = require("./routes/api/telegram");
+    app.use('/squadcast/middleware', telegramRouter);
+}
 
 // HTTPS SERVER
 const port = process.env.PORT;
-https.createServer(options, app).listen(port, () => {
-    console.log("Squadcast - Middleware - Event Hooks - HTTPS Server is running on port:" + port);
-});
+// https.createServer(options, app).listen(port, () => {
+//     console.log("Squadcast - Middleware - Event Hooks - HTTPS Server is running on port:" + port);
+// });
+
+app.listen(port, () =>{});

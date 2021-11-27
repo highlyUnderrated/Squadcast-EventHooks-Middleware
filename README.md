@@ -100,3 +100,17 @@ List of SMTP Providers Supported : -
 "Yandex"
 "Zoho"
 "qiye.aliyun"
+
+
+### Telegram
+
+> URL : https://Server-IP-Address:5000/squadcast/middleware/telegram
+
+Steps :-
+1. `Important` : Before starting, create your own Telegram Bot : https://core.telegram.org/bots#6-botfather
+2. Paste the Telegram Bot Token in the `telegram_bot_token` in .env file. Also change the `telegram_bot_start` variable's value to "yes". Eg. : 
+![image](assets/telegram_env.png)
+3. Now you can start the server, Refer Getting Started - Step 3.
+4. To use the telegram webhook, just paste the URL mentioned above in Squadcast Webhook URl box. In the headers, just add "chatId" and its proper value. Eg. : 
+![image](assets/telegram.png)
+* Tip : To get you own chatId, follow this article : https://www.alphr.com/find-chat-id-telegram/
