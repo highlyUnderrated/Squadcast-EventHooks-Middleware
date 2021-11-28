@@ -2,12 +2,19 @@
 # Squadcast Event Hooks Middleware
 
 This repository contains the code for the Squadcast Middleware and is intended to be used along with Event Hooks.
+The repository supports : 
+1. Slack
+2. Trello
+3. Telegram
+4. Click Up
+5. Email
+
 
 ## Prerequisites
 - git
 - NodeJs | npm
 - nodemon
-### Tip : For Linux Users, just execute the command below to install all the Prerequisites
+### Tip : For Linux Users, just execute the command below to install all the NodeJS prerequisites
 ```
 bash dependencies.sh
 ```
