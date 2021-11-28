@@ -24,6 +24,8 @@ const emailRouter = require("./routes/api/email");
 app.use('/squadcast/middleware', emailRouter);
 const trelloRouter = require("./routes/api/trello");
 app.use('/squadcast/middleware', trelloRouter);
+const clickUpRouter = require("./routes/api/clickUp");
+app.use('/squadcast/middleware', clickUpRouter);
 if( process.env.telegram_bot_start.toLowerCase() == "yes") {
     const telegramRouter = require("./routes/api/telegram");
     app.use('/squadcast/middleware', telegramRouter);

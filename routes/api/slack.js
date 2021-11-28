@@ -10,9 +10,9 @@ const router = require("express").Router();
 // Slack channel API
 router.post('/slack', async (request, response) => {
     //HANDLE BAD REQUEST
-    if ((!request.body.message) && (!request.body.description) && (!request.body.id)) {
-        logger.error("Bad Request, Message, Description or id not found");
-        return response.status(400).json(errorResponse("Bad Request, Message, Description or id not found"));
+    if ((!request.body.message) && (!request.body.description) && (!request.body.status) && (!request.body.id)) {
+        logger.error("Bad Request, Message, Description, Status or id not found");
+        return response.status(400).json(errorResponse("Bad Request, Message, Description, Status or id not found"));
     }
     if ((!request.header("1"))) {
         logger.error("Bad Request, Slack URL not found");

@@ -20,7 +20,7 @@ router.post('/trello', async (request, response) => {
     }
     await axios({
       method: 'post',
-      url: process.env.trellourl,
+      url: process.env.trelloURL,
       params : {
         idList : request.header("idList"),
         key : request.header("key"),
