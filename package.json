@@ -14,7 +14,9 @@
     "squadcast",
     "slack",
     "trello",
-    "email"
+    "email",
+    "telegram",
+    "clickup"
   ],
   "author": "Akash Singh",
   "license": "ISC",

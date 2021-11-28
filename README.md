@@ -111,6 +111,16 @@ Steps :-
 2. Paste the Telegram Bot Token in the `telegram_bot_token` in .env file. Also change the `telegram_bot_start` variable's value to "yes". Eg. : 
 ![image](assets/telegram_env.png)
 3. Now you can start the server, Refer Getting Started - Step 3.
-4. To use the telegram webhook, just paste the URL mentioned above in Squadcast Webhook URl box. In the headers, just add "chatId" and its proper value. Eg. : 
+4. To use the Telegram webhook, just paste the URL mentioned above in Squadcast Webhook URl box. In the headers, just add "chatId" and its proper value. Eg. : 
 ![image](assets/telegram.png)
 * Tip : To get you own chatId, follow this article : https://www.alphr.com/find-chat-id-telegram/
+
+### Click Up
+
+> URL : https://Server-IP-Address:5000/squadcast/middleware/clickup
+
+Request Headers :- 
+* To use the Click Up webhook, just paste the URL mentioned above in Squadcast Webhook URl box. In the headers, just add "listId", "token" & "priority" and their proper values. Eg. : 
+![image](assets/clickup.png)
+* `Important` : Priority is a number that corresponds to the Priorities available in the ClickUp UI. As in the ClickUp UI, priorities cannot be customized.1 is Urgent, 2 is High, 3 is Normal & 4 is Low.
+* Tip : To get your own Access Token & listId, refer https://jsapi.apiary.io/apis/clickup20/introduction/authentication.html
