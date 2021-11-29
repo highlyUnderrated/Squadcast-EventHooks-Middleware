@@ -19,20 +19,20 @@ const options = {
 
 // ROUTES
 const slackRouter = require("./routes/api/slack");
-app.use('/squadcast/middleware', slackRouter);
+app.use('/squadcast/connector', slackRouter);
 const emailRouter = require("./routes/api/email");
-app.use('/squadcast/middleware', emailRouter);
+app.use('/squadcast/connector', emailRouter);
 const trelloRouter = require("./routes/api/trello");
-app.use('/squadcast/middleware', trelloRouter);
+app.use('/squadcast/connector', trelloRouter);
 const clickUpRouter = require("./routes/api/clickUp");
-app.use('/squadcast/middleware', clickUpRouter);
+app.use('/squadcast/connector', clickUpRouter);
 if( process.env.telegram_bot_start.toLowerCase() == "yes") {
     const telegramRouter = require("./routes/api/telegram");
-    app.use('/squadcast/middleware', telegramRouter);
+    app.use('/squadcast/connector', telegramRouter);
 }
 
 // HTTPS SERVER
 const port = process.env.PORT;
 https.createServer(options, app).listen(port, () => {
-    console.log("Squadcast - Middleware - Event Hooks - HTTPS Server is running on port:" + port);
+    console.log("Squadcast - Webhooks - Connectors - HTTPS Server is running on port:" + port);
 });

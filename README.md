@@ -1,7 +1,7 @@
 ![image](assets/SQ.svg)
-# Squadcast Event Hooks Middleware
+# Squadcast Webhook Connectors
 
-This repository contains the code for the Squadcast Middleware and is intended to be used along with Event Hooks.
+This repository contains the code for the Squadcast Webhook Connectors and is intended to be used along with Event Hooks.
 The repository supports : 
 1. Slack
 2. Trello
@@ -22,7 +22,7 @@ bash dependencies.sh
 ## Getting Started
  - Clone this repo
 ```sh
-git clone https://github.com/highlyUnderrated/Squadcast-EventHooks-Middleware.git
+git clone https://github.com/highlyUnderrated/Squadcast-Webhook-Connectors
 ```
 - Install dependencies
 ```sh
@@ -40,7 +40,7 @@ nodemon start
 ### Slack
 ----
 
-> URL : https://Server-IP-Address:5000/squadcast/middleware/slack
+> URL : https://Server-IP-Address:5000/squadcast/connector/slack
 
 Request Headers :- 
 * Slack URL can support multiple channels. To notify channels, just put integers as name of Key value pair & value should be the Slack Webhook. Eg. :
@@ -49,7 +49,7 @@ Request Headers :-
 ### Trello
 ----
 
-> URL : https://Server-IP-Address:5000/squadcast/middleware/trello
+> URL : https://Server-IP-Address:5000/squadcast/connector/trello
 
 Request Headers :- 
 * To use the Trello webhook, just paste the URL mentioned above in Squadcast Webhook URl box. In the headers, just add "idList", "key" & "token" and their proper values. Eg. : 
@@ -63,7 +63,7 @@ Request Headers :-
 ### Telegram
 ----
 
-> URL : https://Server-IP-Address:5000/squadcast/middleware/telegram
+> URL : https://Server-IP-Address:5000/squadcast/connector/telegram
 
 Steps :-
 1. `Important` : Before starting, create your own Telegram Bot : https://core.telegram.org/bots#6-botfather
@@ -78,7 +78,7 @@ Steps :-
 ### Click Up
 ----
 
-> URL : https://Server-IP-Address:5000/squadcast/middleware/clickup
+> URL : https://Server-IP-Address:5000/squadcast/connector/clickup
 
 Request Headers :- 
 * To use the Click Up webhook, just paste the URL mentioned above in Squadcast Webhook URl box. In the headers, just add "listId", "token" & "priority" and their proper values. Eg. : 
@@ -89,7 +89,7 @@ Request Headers :-
 ### Email
 ----
 
-> URL : https://Server-IP-Address:5000/squadcast/middleware/email
+> URL : https://Server-IP-Address:5000/squadcast/connector/email
 
 Request Headers :- 
 * To use the email webhook, just paste the URL mentioned above in Squadcast Webhook URl box. In the headers, just add "from_email", "from_password", "to_email" & "SMTP" and their proper values. Eg. : 
