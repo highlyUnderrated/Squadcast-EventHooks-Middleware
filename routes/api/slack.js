@@ -20,13 +20,30 @@ router.post('/slack', async (request, response) => {
     }
     var count = 1;
     var resp = "";
+    var title = "";
+    if (request.body.event_type == "incident_resolved") {
+        title = "<" + "https://app.squadcast.com/incident/" + request.body.id + "|*Resolved #" + request.body.id + "*>\n"
+    }
+    else if (request.body.event_type == "incident_reassigned") {
+        title = "<" + "https://app.squadcast.com/incident/" + request.body.id + "|*Reassigned #" + request.body.id + "*>\n"
+    }
+    else if (request.body.event_type == "incident_acknowledged") {
+        title = "<" + "https://app.squadcast.com/incident/" + request.body.id + "|*Acknowledged #" + request.body.id + "*>\n"
+    }
+    else if (request.body.event_type == "incident_triggered") {
+        title = "<" + "https://app.squadcast.com/incident/" + request.body.id + "|*Triggered #" + request.body.id + "*>\n"
+    }
     while(true){
         currenturl = request.header(count.toString());
         if (currenturl !== undefined) {
-            var slackData = { "text" : "Incident Name : " + request.body.message 
-                + "\n\n" + "Incident State : " + request.body.status + "\n\n" 
-                + "Description : " + request.body.description + "\n\n" 
-                + "Incident Link : " + "https://app.squadcast.com/incident/"+request.body.id}
+            var slackData = { "text" : "\n-------------------------------------\n" 
+                + title
+                + "*Incident Name* : " + request.body.message 
+                + "\n" + "*Incident State* : " + request.body.status + "\n" 
+                + "*Service Name* : " + request.body.service.name + "\n"
+                + "*Alert soure* : " + request.body.alert_source.type + "\n\n"
+                + "*Description* : " + request.body.description + "\n" 
+                + "\n-------------------------------------\n"}
             await axios({
                 method: 'post',
                 url: currenturl,
